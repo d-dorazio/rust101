@@ -9,7 +9,7 @@ revealOptions:
 
 # Introduction to Rust
 
-## [d-dorazio.github.io/rust-intro](d-dorazio.github.io/rust-intro)
+## [d-dorazio.github.io/rust101](d-dorazio.github.io/rust101)
 
 <!-- .slide: data-background="./assets/rust-logo.svg" data-background-position="top left" data-background-size="20%" data-background-opacity="0.8"-->
 
@@ -45,7 +45,7 @@ thread safety, etc...) and I don't like it much...
 ## What is Rust?
 
 Rust is a modern programming language that provides zero-cost abstractions to
-write correct and fast programs.
+write correct and fast code.
 
 Note:
 * focus on _modern_: some new languages already feel old and outdated.
@@ -73,7 +73,6 @@ Note: rust is hard to learn but it's worth it!
 * Compiled
 * Fast
 * Modern static type system
-* Powerful macros
 * Safe manual memory management without garbage collection
 
 Note:
@@ -87,7 +86,7 @@ Note:
 * Embedded
 * CLI
 * WebAssembly
-* ~~Backend~~
+* Backend
 
 Note: there are already a bunch of awesome CLI applications that rock(e.g.
 ripgrep, fd and bat). System programming can be fun and colored!
@@ -95,6 +94,13 @@ ripgrep, fd and bat). System programming can be fun and colored!
 ---
 
 ## Why use Rust
+
+----
+
+# Hack without fear!
+
+Note: use Rust when you want to experiment with things you don't know (yet)
+because Rust got you covered
 
 ----
 
@@ -399,7 +405,7 @@ fn main() {
 
     // doesn't compile because the ownership of v was
     // *moved* to reversed
-    println!("original {:?}", v);
+    // println!("original {:?}", v);
 
     // rev goes out of scope and memory is released
 }
@@ -533,26 +539,89 @@ fn main() {
 
 Note: this is catched by the second rule
 
+----
+
+## [Reference to local variable](https://play.rust-lang.org/?version=stable&mode=debug&edition=2015&gist=155dc52009c08da02c6a51d12b4d6aff)
+
+```rust
+fn get_magic(id: &i64) -> &u8 {
+    let magic = 42;
+
+    if *id == 0 {
+        &magic
+    } else {
+        &0
+    }
+}
+```
+
+Note: explain that * dereferences the variable
+
+---
+
+<!-- .slide: data-background="./assets/don-typing.gif" -->
+
+---
+
+## Rust Setup
+
+----
+
+### How to install Rust
+
+```shell
+$ curl https://sh.rustup.rs -sSf | sh
+$ rustup install stable
+$ rustc --version
+```
+
+----
+
+### How to compile and run a single file (the hard way)
+
+```rust
+$ rustc main.rs && ./main
+```
+
+----
+
+### How to create, compile and run a project
+
+```shell
+$ cargo new exercises
+$ cargo build
+$ # main is src/main.rs
+$ cargo run
+```
+
+----
+
+### VsCode setup
+
+Install the [Rust
+plugin](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust) and
+open a Rust *project*. The extension should install all the tools by itself.
+
+----
+
+### Tools
+
+- [Formatter](https://github.com/rust-lang-nursery/rustfmt)
+- [Linter](https://github.com/rust-lang-nursery/rust-clippy)
+
+---
+
+## [Sort your vec!](https://play.rust-lang.org/?version=stable&mode=debug&edition=2015&gist=d9872a138fab06e63bb44c95d3dd70c1)
+
+
 ---
 
 <!-- .slide: data-background="./assets/the-end.gif" -->
 
 <!--
 
-part 1 toc:
-- struct/arrays/tuples
-- enums(Option and Result)
-- pattern matching
-- error handling(? syntax)
-- borrow checker(avoids a huge class of typical systems programming
-  errors(double free, dangling points, etc...))
-- iterators
-
 
 part 2 toc:
-- brief overview on how to install rust and setup with vscode
-- brief introduction to cargo
-- clippy and rustfmt
 - playground overview
 - don't be scared by the errors:
     - the compiler is your friend
