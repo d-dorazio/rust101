@@ -611,8 +611,20 @@ open a Rust *project*. The extension should install all the tools by itself.
 
 ---
 
-## [Sort your vec!](https://play.rust-lang.org/?version=stable&mode=debug&edition=2015&gist=d9872a138fab06e63bb44c95d3dd70c1)
+## [Sort your vec!](https://play.rust-lang.org/?version=stable&mode=debug&edition=2015&gist=7fc68664f8941f7fb0d00f44fb8d8463)
 
+
+Note: rust supports unit testing out of the box! briefly explain modules and
+imports.
+
+---
+
+## Where to go from here
+
+- [Rust by Example](https://doc.rust-lang.org/stable/rust-by-example/)
+- [The Rust Book](https://doc.rust-lang.org/stable/book/2018-edition/index.html)
+- [Rust Gentle Intro](https://stevedonovan.github.io/rust-gentle-intro/)
+- [Learning Rust](https://learning-rust.github.io/)
 
 ---
 
