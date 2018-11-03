@@ -611,11 +611,55 @@ open a Rust *project*. The extension should install all the tools by itself.
 
 ---
 
+## Exercises
+
+----
+
 ## [Sort your vec!](https://play.rust-lang.org/?version=stable&mode=debug&edition=2015&gist=7fc68664f8941f7fb0d00f44fb8d8463)
 
 
 Note: rust supports unit testing out of the box! briefly explain modules and
 imports.
+
+----
+
+## [Binary search](https://play.rust-lang.org/?version=stable&mode=debug&edition=2015&gist=9fd8d08aa155ab13659a8383bcc23794)
+
+Note:
+- explain slices
+- ```
+pub fn binary_search(v: &[u32], el: u32) -> Option<usize> {
+    use std::cmp::Ordering;
+
+    if v.is_empty() {
+        return None;
+    }
+
+    let mid = v.len() / 2;
+
+    match el.cmp(&v[mid]) {
+        Ordering::Equal => Some(mid),
+        Ordering::Less => binary_search(&v[..mid], el),
+        Ordering::Greater => binary_search(&v[mid + 1..], el).map(|i| i + mid + 1),
+    }
+}
+```
+
+----
+
+## [Isograms!](https://play.rust-lang.org/?version=stable&mode=debug&edition=2015&gist=48ac50861c63b9c6363e183174acbc9e)
+
+Note:
+- explain `&str` vs `String`
+- ```
+pub fn is_isogram(s: &str) -> bool {
+    let mut already_seen = HashSet::new();
+
+    s.chars()
+        .filter(|c| !c.is_whitespace() && *c != '-')
+        .all(|c| already_seen.insert(c.to_ascii_lowercase()))
+}
+```
 
 ---
 
