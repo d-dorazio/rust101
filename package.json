@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "reveal-md --css index.css -w README.md",
-    "build:prod": "reveal-md README.md --css index.css --static docs --static-dirs assets"
+    "build:prod": "reveal-md README.md --css index.css --static docs --assets-dir assets --static-dirs assets"
   },
   "devDependencies": {
     "reveal-md": "^2.3.0"
