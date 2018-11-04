@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "reveal-md -w index.md",
-    "deploy": "reveal-md index.md --static public --static-dirs assets"
+    "dev": "reveal-md -w README.md",
+    "build:prod": "reveal-md README.md --static public --static-dirs assets"
   },
   "devDependencies": {
     "reveal-md": "^2.3.0"
