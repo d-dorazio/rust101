@@ -81,6 +81,17 @@ Note:
 
 ---
 
+## Who's using Rust
+
+![firefox-logo](./assets/firefox-logo.svg) <!-- .element: height="150px;" style="margin: 10px;" -->
+![dropbox-logo](./assets/dropbox-logo.svg) <!-- .element: height="150px;" style="margin: 10px;" -->
+![sentry-logo](./assets/sentry-logo.svg) <!-- .element: height="200px;" style="margin: 10px;" -->
+
+![npm-logo](./assets/npm-logo.svg) <!-- .element: height="100px;" style="margin: 10px;" -->
+![cloudflare-logo](./assets/cloudflare-logo.svg) <!-- .element: height="150px;" style="margin: 10px;" -->
+
+---
+
 ## Where to use Rust
 
 * Embedded
