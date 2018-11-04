@@ -1,7 +1,7 @@
 ---
 title: Rust introduction
 theme: solarized
-css: index.css
+css: assets/index.css
 revealOptions:
   previewLinks: true
   transition: 'slide'
@@ -9,7 +9,7 @@ revealOptions:
 
 # Introduction to Rust
 
-## [d-dorazio.github.io/rust101](d-dorazio.github.io/rust101)
+## [d-dorazio.github.io/rust101](https://d-dorazio.github.io/rust101) <!-- .element: target="_blank" rel="noopener" data-preview-link="false" -->
 
 <!-- .slide: data-background="./assets/rust-logo.svg" data-background-position="top left" data-background-size="20%" data-background-opacity="0.8"-->
 
