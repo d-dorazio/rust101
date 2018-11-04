@@ -1,7 +1,6 @@
 ---
 title: Rust introduction
 theme: solarized
-css: assets/index.css
 revealOptions:
   previewLinks: true
   transition: 'slide'
