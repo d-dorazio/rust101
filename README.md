@@ -67,19 +67,6 @@ Note: rust is hard to learn but it's worth it!
 
 ---
 
-## Features
-
-* Compiled
-* Fast
-* Modern static type system
-* Safe manual memory management without garbage collection
-
-Note:
-- manual memory management is usually hard, but not that much in rust.
-- macro system is not C-like, it's actually pretty good.
-
----
-
 ## Who's using Rust
 
 ![firefox-logo](./assets/firefox-logo.svg) <!-- .element: height="150px;" style="margin: 10px;" -->
@@ -88,6 +75,19 @@ Note:
 
 ![npm-logo](./assets/npm-logo.svg) <!-- .element: height="100px;" style="margin: 10px;" -->
 ![cloudflare-logo](./assets/cloudflare-logo.svg) <!-- .element: height="150px;" style="margin: 10px;" -->
+
+---
+
+## Features
+
+* Compiled
+* Fast
+* Modern static type system
+* Safe manual memory management without garbage collection
+
+Note:
+- manual memory management is usually hard, but not that much in Rust.
+- macro system is not C-like, it's actually pretty good.
 
 ---
 
@@ -160,7 +160,7 @@ Note:
 - Types help catch a lot of common errors(`undefined is not a function` or `null
   pointer exception` anyone?).
 - `rustc --explain` explains the error the compiler just gave!
-- The rust compiler team put substantial effort on the compiler to output
+- The Rust compiler team put substantial effort on the compiler to output
   meaningful error messages with suggestions! Most of the errors messages are so
   good that some experimental tools exist to automatically apply the
   suggestions! c++ errors suck w.r.t. this
@@ -175,9 +175,9 @@ Note:
 Note:
 - Integration with other languages is easy because of the lack of a runtime and
   garbage collector.
-- to talk with C there's `bindgen` which automatically generates low level rust
+- to talk with C there's `bindgen` which automatically generates low level Rust
   bindings for C header files. The use case is to use a modern language
-  leveraging the power of rust abstractions and guarantees.
+  leveraging the power of Rust abstractions and guarantees.
 - to talk with Python/Node there exists libraries that perform the binding for
   you. The use case is to speed things up because interpreted languages are
   usually slow.
@@ -186,7 +186,7 @@ Note:
 
 ---
 
-## Why not to use rust
+## Why not to use Rust
 
 ----
 
@@ -200,7 +200,7 @@ Note:
 
 ![cratesio](./assets/cratesio.png)
 
-Note: rust ecosystem is not that big and doesn't contain everything, but it has
+Note: Rust ecosystem is not that big and doesn't contain everything, but it has
 some really well designed libraries imho.
 
 ---
@@ -490,7 +490,7 @@ Note: highlight that both the reference and the owner must be `mut`
 
 <!-- .slide: data-background="./assets/lebron.jpg" -->
 
-Note: just with references rust could have the exact same problems that C has
+Note: just with references Rust could have the exact same problems that C has
 that is use after free, dangling points, etc...
 
 ---
@@ -628,7 +628,7 @@ open a Rust *project*. The extension should install all the tools by itself.
 ## [Sort your vec!](https://play.rust-lang.org/?version=stable&mode=debug&edition=2015&gist=7fc68664f8941f7fb0d00f44fb8d8463)
 
 
-Note: rust supports unit testing out of the box! briefly explain modules and
+Note: Rust supports unit testing out of the box! briefly explain modules and
 imports.
 
 ----
